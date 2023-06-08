@@ -1,3 +1,5 @@
 from django.contrib import admin
+from . models.cv import CvTheque, Job
 
-# Register your models here.
+admin.site.register(CvTheque)
+admin.site.register(Job)
