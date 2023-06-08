@@ -8,3 +8,5 @@ cvapp/models/__pycache__
 cvtheque/__pycache__
 .env
 db.sqlite3
+
+static/media
