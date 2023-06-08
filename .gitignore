@@ -1,0 +1,10 @@
+.cv_env
+cvapp/__pycache__
+cvapp/migrations/__pycache__
+cvapp/migrations
+cvapp/views/__pycache__
+cvapp/models/__pycache__
+
+cvtheque/__pycache__
+.env
+db.sqlite3
