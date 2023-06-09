@@ -17,6 +17,9 @@ DEBUG = bool(int(os.getenv('DEBUG')))
 
 ALLOWED_HOSTS = []
 
+if DEBUG!=True:
+    ALLOWED_HOSTS.extend(os.getenv('ALLOWED_HOSTS').split(','))
+
 
 # Application definition
 
@@ -39,6 +42,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'cvtheque.urls'
@@ -114,6 +118,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 
 
