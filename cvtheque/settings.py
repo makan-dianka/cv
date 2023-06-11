@@ -129,6 +129,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # HTTPS settings 
 # set all the values to True in production
-SESSION_COOKIE_SECURE=True
-CSRF_COOKIE_SECURE=True
-SECURE_SSL_REDIRECT=True
+# SESSION_COOKIE_SECURE=True
+# CSRF_COOKIE_SECURE=True
+# SECURE_SSL_REDIRECT=True
