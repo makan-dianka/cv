@@ -10,7 +10,7 @@ cvtheque/__pycache__
 db.sqlite3
 cv.sock
 debug.log
-uwsgi.ini
+cv_uwsgi.ini
 
 static/media/cvs/*.pdf
 staticfiles
