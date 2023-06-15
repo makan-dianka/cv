@@ -132,3 +132,46 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # SESSION_COOKIE_SECURE=True
 # CSRF_COOKIE_SECURE=True
 # SECURE_SSL_REDIRECT=True
+
+LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+
+        'formatters': {
+            'verbose': {
+                'format': '%(levelname)s %(asctime)s %(module)s %(lineno)s %(message)s',
+            },
+
+            'simple': {
+                'format': '%(levelname)s %(message)s',
+            },
+        },
+
+        'filters': {
+            'require_debug_false': {
+                '()': 'django.utils.log.RequireDebugFalse',
+            },
+        },
+
+        'handlers': {
+            'file': {
+                'level': 'DEBUG',
+                'class': 'logging.FileHandler',
+                'filename' :  os.path.join(BASE_DIR, 'debug.log'),
+                'formatter': 'verbose'
+            },
+
+        },
+
+        'loggers': {
+            'django': {
+                'handlers':['file'],
+                'propagate': True,
+                'level':'DEBUG',
+            },
+            'app': {
+                'handlers': ['file'],
+                'level': 'DEBUG',
+            },
+        }
+    }

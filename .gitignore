@@ -9,6 +9,7 @@ cvtheque/__pycache__
 .env
 db.sqlite3
 cv.sock
+debug.log
 
 static/media/cvs/*.pdf
 staticfiles
